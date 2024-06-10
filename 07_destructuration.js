@@ -37,7 +37,7 @@ console.log(extractRest([1,2,3,4]))
  * - interdiction d'utiliser l'opérateur "." pour accéder au champ "name"
  */
 
-const extractName = (objet) => {let {nom} = objet; return nom}
+const extractName = ({name}) => name;
 console.log(extractName({name: "toto", age: 42} ))
 
 /**
@@ -51,6 +51,7 @@ console.log(extractName({name: "toto", age: 42} ))
  * 
  */
 
-const removePassword = () => {};
+const removePassword = ({name}) => name;
+console.log(removePassword({name: "toto", password: "1234"}))
 
-module.exports = {extractFirstTwo, extractRest, extractName, removePassword}
+module.exports = {extractFirstTwo, extractRest, extractName, /*removePassword*/}
