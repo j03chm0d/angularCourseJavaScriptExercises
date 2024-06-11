@@ -68,10 +68,14 @@ const usingAwait =  async (cb) => {
 //décommentez la ligne suivante une fois le package installé
 //const axios = require("axios");
 
-const apiResponse = axios.get('https://jsonplaceholder.typicode.com/todos/1').then(function(res,body) {
-    console.log(res.data);
+async function apiResponse() {try {const response  =  await axios.get('https://jsonplaceholder.typicode.com/todos/1'); 
+return response.data; } catch(e) {console.log(e)}}
 
-}).catch().finally();
+
+apiResponse();
+
+    
+
 
 
 
