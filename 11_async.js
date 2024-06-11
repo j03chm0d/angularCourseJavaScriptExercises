@@ -11,8 +11,20 @@
  *    - ne pas utiliser async await
  * 
  */
-const usingThen = (cb) => {
-}
+const {sleep} = require("./10_promise");
+const usingThen = new Promise((resolve, reject)=> {resolve('success')});
+
+usingThen.then((value) => console.log(value));
+
+
+
+
+
+
+
+
+
+//usingThen();
 
 /**
  * Créez une fonction asynchrone qui attend 2 seconde puis execute le callback passé en paramètre

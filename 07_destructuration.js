@@ -12,7 +12,7 @@
  *  - interdiction d'utiliser slice ou splice
  */
 
-const extractFirstTwo = (array) => {let [a,b] = array; return [a,b]};
+const extractFirstTwo = ([a,b]) => [a,b];
 console.log(extractFirstTwo([1,2,3]))
 
 /**
@@ -22,7 +22,7 @@ console.log(extractFirstTwo([1,2,3]))
  * exemple: [1, 2, 3] => [2, 3]
  */
 
-const extractRest = (array) => {let [a, ...reste] = array; return reste}
+const extractRest = ([, ...rest]) => rest;
 console.log(extractRest([1,2,3,4]))
 
 /**
@@ -51,7 +51,7 @@ console.log(extractName({name: "toto", age: 42} ))
  * 
  */
 
-const removePassword = ({name}) => name;
+const removePassword = ({password, ...rest}) => rest;
 console.log(removePassword({name: "toto", password: "1234"}))
 
 module.exports = {extractFirstTwo, extractRest, extractName, /*removePassword*/}

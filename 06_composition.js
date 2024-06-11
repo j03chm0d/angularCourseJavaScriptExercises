@@ -43,7 +43,7 @@ console.log(merge({a: 1, b: 2}, {c: 3, d: 4} ))
  *  - interdiction d'utiliser l'opérateur d'affectation "="
  */
 
-const setName = (obj, name) => {}
+const setName = (obj, name) => ({...obj, name})
 
 // astuce: {...obj} crée une copie de l'objet, c'est un des principes de l'immutabilité et évite les problèmes de référence
 module.exports = {concat, push, merge, setName}
