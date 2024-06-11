@@ -25,8 +25,18 @@ ex: la pomme est rouge et la banane est jaune
  */
 
 const countWords = (sentence) => {
+  let dict = {};
+  sentence.reduce((word) => dict.has(word)? 3: 
 };
 console.log(countWords("la pomme est rouge et la banane est jaune"));
+
+
+function frequency(sentence, property){
+  return sentence.reduce(function(acc, obj){
+    let cle = obj;
+    
+  })
+}
 
 /**
 Exercice : Trier un objet par valeur
